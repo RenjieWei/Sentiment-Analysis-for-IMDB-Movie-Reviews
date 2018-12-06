@@ -9,15 +9,17 @@ The projects starts off with how to preprocess the dataset into a more appropria
 + Part 3 will show how to train a language model and how doing this as a first step can sometimes improve results for other tasks
 
 ## Data Source
+This project will work with the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) of IMDB movie reviews. This is a dataset for binary sentiment classification with a collection of 75,000 .txt files.
 
-## Preprocessing the Data
+## [Preprocessing the Data]()
 
 Each review is contained in a separate .txt file and organized into separate directories depending on if they’re positive/negative or part of the train/test/unlabeled splits. It’s easier to re-work the data before training any models for multiple reasons.
 
 + It’s faster to combine everything into fewer files. 
 + Need to tokenize the dataset (split long strings up into individual words/symbols). 
 + Need to know how many unique tokens there are to decide on our vocabulary/model size.
-+ Don’t want to constantly be converting strings to token IDs within the training loop (takes non-negligible amount of time).  + Storing everything as token IDs directly leads to the 1-hot representation necessary for input into our model.
++ Don’t want to constantly be converting strings to token IDs within the training loop (takes non-negligible amount of time).   
++ Storing everything as token IDs directly leads to the 1-hot representation necessary for input into our model.
 
 ## Part 1 - Bag of Words
 ### 1a - Without GloVe Features
