@@ -1,20 +1,20 @@
 # Sentiment-Analysis-for-IMDB-Movie-Reviews
 Deep Learning application within the field of Natural Language Processing (NLP) in PyTorch
 
-## Introduction
+## 1.Introduction
 This project aims to train models to detect the sentiment of written text. More specifically, it will try to feed a movie review into a model and have it predict whether it is a positive or negative movie review.
 The projects starts off with how to preprocess the dataset into a more appropriate format followed by three main parts. 
 + Part 1 deals with training basic Bag of Words models.
 + Part 2 will start incoporating temporal information by using LSTM layers.
 + Part 3 will show how to train a language model and how doing this as a first step can sometimes improve results for other tasks
 
-## Data Source
+## 2.Data Source
 This project will work with the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) of IMDB movie reviews. This is a dataset for binary sentiment classification with a collection of 75,000 .txt files.
-## Code Implementation
-### Preprocessing the Data
+## 3.Code Implementation
+### 3.1 Preprocessing the Data
 
 Each review is contained in a separate .txt file and organized into separate directories depending on if they’re positive/negative or part of the train/test/unlabeled splits. It’s easier to re-work the data before training any models.
-Tokenizing the string using the nltk package  
+
 Example before and after tokenization
 ```
 "`Mad Dog' Earle is back, along with his sad-sack moll Marie, and that fickle clubfoot Velma. So are Babe and Red, Doc and Big Mac, and even the scenery-chewing mutt Pard. The only thing missing is a good reason for remaking Raoul Walsh's High Sierra 14 years later without rethinking a line or a frame, and doing so with talent noticeably a rung or two down the ladder from that in the original. (Instead of Walsh we get Stuart Heisler, for Humphrey Bogart we get Jack Palance, for Ida Lupino Shelley Winters, and so on down through the credits.) The only change is that, this time, instead of black-and-white, it's in Warnercolor; sadly, there are those who would count this an improvement.<br /><br />I Died A Thousand Times may be unnecessary \x96 and inferior \x96 but at least it's not a travesty; the story still works on its own stagy terms. Earle (Palance), fresh out of the pen near Chicago, drives west to spearhead a big job masterminded by ailing kingpin Lon Chaney, Jr. \x96 knocking over a post mountain resort. En route, he almost collides with a family of Oakies, when he's smitten with their granddaughter; the smiting holds even when he discovers she's lame. Arriving at the cabins where the rest of gang holes up, he finds amateurish hotheads at one another's throats as well as Winters, who throws herself at him (as does the pooch). Biding time until they get a call from their inside man at the hotel, Palance (to Winter's chagrin) offers to pay for an operation to cure the girl's deformity, a gesture that backfires. Then, the surgical strike against the resort turns into a bloodbath. On the lam, Palance moves higher into the cold Sierras....<br /><br />It's an absorbing enough story, competently executed, that lacks the distinctiveness Walsh and his cast brought to it in 1941, the year Bogie, with this role and that of Sam Spade in the Maltese Falcon, became a star. And one last, heretical note: Those mountains do look gorgeous in color.<br /><br />"
