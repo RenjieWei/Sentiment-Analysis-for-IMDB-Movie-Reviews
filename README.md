@@ -30,6 +30,7 @@ I implemented the basic bag of words model to extract the sentiment information.
 A recurrent neural network can be used to maintain the temporal information and process the data as an actual sequence. This part consists of training recurrent neural networks built with LSTM layers. I trained two separate models, one from scratch with a word embedding layer and one with GloVe features.
 ### 3.4 Language Model
 This part is about training a language model by leveraging the additional unlabeled data and showing how this pretraining stage typically leads to better results on other tasks like sentiment analysis.
+Here is a sample of text produced by the trained language model.
 ```
 # temperature 1.3
 a crude web backdrop from page meets another eastern story ( written by an author bought ) when it was banned months , i am sure i truly are curiosity ; i have always been the lone clumsy queen of the 1950 's shoved director richard `` an expert on target '' . good taste . not anything report with star 70 's goods , having it worked just equally attractive seem to do a moving train . memorable and honest in the case of `` ross , '' you find it fantasy crawford is strong literature , job suffering to his a grotesque silent empire , for navy turns to brooklyn and castle of obsession that has already been brought back as welles ' anthony reaches power . it 's totally clearly staged , a cynical sit through a change unconscious as released beer training in 1944 with mickey jones 
@@ -47,7 +48,7 @@ i wanted to walk out on featuring this expecting even glued and turd make . he g
 * Trained the language model and achieved 93.01% accuracy in the test dataset
 * To put this in perspective, the state of the art on the IMDB sentiment analysis is around 94.1%.
 
-Here is a sample of text produced by the trained language model
+
 
 ### 4.2 Further Improvement
 There are several ways in which I can build the model. I will continue trying and improving the accuracy of the model by experimenting with different architectures, layers and parameters.
